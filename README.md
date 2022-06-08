@@ -6,11 +6,16 @@ Just like Netflix, there is a client and server.  The client is what the user in
 
 This demonstration has a number of hand-made videos and dynamically streams them to a number of user clients.
 
-## Very quick third-party demo (no Docker required)
+## Very quick third-party demo
+
+This demonstration just shows a client connecting to a server, and making it so that the client successfully plays back audio that you manually upload to the server.
+
+The server can be run using a single `docker run` command, and leaving it hanging.  The client can be downloaded and compiled and run easily (via GoLang).
 
 ```
 # Run the server:
 git clone https://github.com/gwuhaolin/livego
+docker run -p 1935:1935 -p 7001:7001 -p 7002:7002 -p 8090:8090 gwuhaolin/livego
 
 # Build and run the client:
 git clone https://github.com/adrg/libvlc-go-examples
