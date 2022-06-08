@@ -4,7 +4,7 @@ A Netflix-like demonstration of systems design and implementation.
 
 Just like Netflix, there is a client and server.  The client is what the user interacts with, and it communicates with the server in order to stream content.
 
-This demonstration has a number of hand-made videos and dynamically streams them to a number of user clients.
+This demonstration has a number of hand-made videos and dynamically streams them to a number of user clients according to their preferences.
 
 ## Very quick third-party demo
 
@@ -14,8 +14,7 @@ The server can be run using a single `docker run` command, and leaving it hangin
 
 ```
 # Run the server:
-git clone https://github.com/gwuhaolin/livego
-docker run -p 1935:1935 -p 7001:7001 -p 7002:7002 -p 8090:8090 gwuhaolin/livego
+docker run --rm -p 1935:1935 -p 7001:7001 -p 7002:7002 -p 8090:8090 gwuhaolin/livego
 
 # Build and run the client:
 git clone https://github.com/adrg/libvlc-go-examples
