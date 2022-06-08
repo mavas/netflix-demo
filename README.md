@@ -6,6 +6,12 @@ Just like Netflix, there is a client and server.  The client is what the user in
 
 This demonstration has a number of hand-made videos and dynamically streams them to a number of user clients according to their preferences.
 
+```
+git clone https://github.com/mavas/netflix-demo
+cd netflix-demo
+docker build -t netflix-demo .
+```
+
 ## Very quick third-party demo
 
 This demonstration just shows a client connecting to a server, and making it so that the client successfully plays back audio that you manually upload to the server.
