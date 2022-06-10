@@ -4,12 +4,12 @@ RUN apt-get update -y
 RUN apt-get install aptitude -y
 
 # These 4 development libraries need to be installed on the Ubuntu operating
-# system:
+# system, in order for the followup libraries to compile successfully:
 RUN aptitude install libvlc-dev libglib2.0-dev -y
 RUN aptitude install libcairo-dev -y
 RUN aptitude install libgtk-3-dev -y
 
-# Build the Go library, and the binary:
+# Build the library, and the binary:
 RUN git clone https://github.com/adrg/libvlc-go && \
     cd libvlc-go/v3 && go build
 RUN git clone https://github.com/adrg/libvlc-go-examples
@@ -23,4 +23,4 @@ RUN cd libvlc-go-examples/v3/gtk3_player && \
         go build -v
 
 # ..
-RUN echo "done!"
+CMD ["./libvlc-go-examples/v3/gtk3_player/m"]
