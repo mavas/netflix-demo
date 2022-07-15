@@ -41,4 +41,4 @@ ffmpeg -i demo.flv http://localhost:6060/channel
 
 ## Disclaimer
 
-This demonstration is a work in progress, as of June 2022, and so doesn't correctly work yet.
+This demonstration is a work in progress, as of June 2022, and so doesn't actually work yet.
